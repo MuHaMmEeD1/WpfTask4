@@ -59,7 +59,7 @@ namespace WpfApp4
 
             if(textBox.Text.Length != 0)
             {
-                m.Add(new MyMesseg() { messeg = $"{textBox.Text}", time = DateTime.Now });
+                m.Add(new MyMesseg() { messeg = $" {textBox.Text} ", time = DateTime.Now });
 
 
                 textBox.Text = "";
