@@ -4,8 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp4"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        
         mc:Ignorable="d"
-        Title="AzChat" Height="660" Width="400" Background="#dcf8c6" Icon ="chat.png">
+        Title="AzChat" Height="660" Width="400" 
+                       MaxHeight="660" MaxWidth="400"
+                       MinHeight="660" MinWidth="400"
+        Background="#BEEBF5" 
+        Icon ="ICON.png" >
     <Grid>
 
 
@@ -17,6 +23,12 @@
             Width="300"
             HorizontalAlignment="Left"
             VerticalAlignment="Bottom"
+            Background="#82EBF5"
+            FontSize="20"
+            Foreground="#00CCA7"
+            Padding="10 5 10 0"
+            BorderBrush="#00E6BC"
+            BorderThickness="2"
             />
 
         <Button
@@ -26,72 +38,70 @@
             Height="40"
             Width="55"
             HorizontalAlignment="Right"
-            Content="︿"
+            
             FontWeight="Bold"
-            Background="#128c7e"
-            Foreground="White"
+            Background="#82EBF5"
+            Foreground="#00E6BC"
             VerticalAlignment="Bottom" Click="bt1_Click"
-            />
+            BorderBrush="#00E6BC"
+            BorderThickness="2"
+            Padding="0"
+            
+            
+            Style="{StaticResource MaterialDesignFlatSecondaryMidBgButton}"
+            >
+            <materialDesign:PackIcon
+                Kind="MessageArrowRightOutline"
+                Height="30"
+                Width="30" 
+                Padding="0"
+                ></materialDesign:PackIcon>
 
-        <Label  Content="        MUHAMMƏD  " 
-                Width="160" 
+        </Button>
+
+        
+        <Label  Content="MUHAMMƏD" 
+                Width="360" 
                 Height="40"
                 FontWeight="Bold" 
-                Foreground="White" 
+                Foreground="#00E6BC" 
                 FontSize="15"
                 VerticalContentAlignment="Center"
-                HorizontalAlignment="Left"
+                HorizontalContentAlignment="Center"
+                HorizontalAlignment="Center"
                 VerticalAlignment="Top"
-                Background="#25d366"
-                BorderBrush="#128c7e"
+                Background="#AAEBF5"
+                BorderBrush="#00E6BC"
                 BorderThickness="2"
                 
-                Margin="30 16 0 0"
+                Margin="0 16 0 0"
                 
                 ></Label>
-        
-        <Ellipse 
-            Width="45" 
-            Height="45" 
-            Fill="#128c7e"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
+
+        <materialDesign:PackIcon 
+            Kind="AccountCircle" 
+            Foreground="#00E6BC"
+            Height="30"
+            Width="30"
+            Margin="25 20 0 0"
             
-            Margin="12 14 0 0"
             
             />
         
-        <Ellipse 
-            Width="40" 
-            Height="40" 
-            Fill="#25d366"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            
-            Margin="14.5 16.5 0 0"
+        <materialDesign:PackIcon 
+            Kind="Phone" 
+            Foreground="#00E6BC"
+            Height="30"
+            Width="30"
+            Margin="0 20 25 0"
+            HorizontalAlignment="Right"
             
             />
-
         
 
 
-        <Label
-            
-             Content="   M   " 
-                Width="50" 
-                Height="50"
-                FontWeight="Bold" 
-                Foreground="White" 
-                HorizontalContentAlignment="Left"
-                VerticalContentAlignment="Center"
-                FontSize="15"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                
-                Margin="10 11 0 0"
-            
-            
-            />
+
+
 
 
 
@@ -104,9 +114,11 @@
             Margin="10 10 10 5"
             Height="490"
             Width="360"
-            Background="#ece5dd"
+            Background="#AAEBF5"
+            BorderBrush="#00E6BC"
+            BorderThickness="2"
             
-            
+
             >
 
 
@@ -122,38 +134,36 @@
                         </Grid.ColumnDefinitions>
                         
                         
-                        <Label Grid.Column="0" Content="{Binding time}"></Label>
+                        <Label Grid.Column="0" Content="{Binding time}"
+                               Foreground="#00CCA7" FontWeight="DemiBold"
+                               Margin="0 0 30 0"
+                               ></Label>
 
 
-                        <Grid Grid.Column="1" >
+                       
 
-                            <TextBlock 
-                            Grid.Column="1"
+                        <TextBlock 
+                        Grid.Column="1"
                             
                                 
-                            Margin="80 0 0 0"
-                                
-                            Text="{Binding messeg}" 
-                           
+                        Text="{Binding messeg}" 
+  
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center"
+                        Foreground="#00B392"
                             
-                           
-                            
-                            HorizontalAlignment="Right"
-                            VerticalAlignment="Center"
-                            
-                            Background="White"
-                            
-
-                                
-                            >
+                        FontWeight="DemiBold"
+                        Background="Transparent"
+    
+                        >
                                 
                                 
                                 
                                 
-                            </TextBlock>
+                        </TextBlock>
 
 
-                        </Grid>
+                      
                         
                       
                     </Grid>

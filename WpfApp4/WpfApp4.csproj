@@ -8,11 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="chat.png" />
+    <None Remove="ICON.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="chat.png">
+    <Content Include="ICON.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
